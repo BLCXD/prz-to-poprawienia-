@@ -1,11 +1,13 @@
 # Tutaj pisz swój kod, młody padawanie ;-)
 def rozklad(n):
-    g = int(n**0.5) # tak żeby pierwiastka nie bylo
+    #g = int(n**0.5) # tak żeby pierwiastka nie bylo
     czyn = []
-    for i in range(2, g + 1):
-         while n % i == 0:
+    while i*i <= n:
+        while n % i == 0:
             czyn.append(i)
             n //= i
+        i+=1
+        
     if n > 1:
         czyn.append(n)
     return sum(czyn) - czyn[len(czyn)-1]
