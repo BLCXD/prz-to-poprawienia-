@@ -1,7 +1,8 @@
 # Tutaj pisz swój kod, młody padawanie ;-)
 def rozklad(n):
-    #g = int(n**0.5) # tak żeby pierwiastka nie bylo
+   i = 2
     czyn = []
+    
     while i*i <= n:
         while n % i == 0:
             czyn.append(i)
